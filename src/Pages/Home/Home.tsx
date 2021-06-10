@@ -1,12 +1,12 @@
 import { Header } from "../../Components/Header";
 import { Link } from "react-router-dom";
 import banner1 from "../../Assets/images/banner 1.png";
+import { getGameQuestions } from "../../services/GameArea/GameArea";
 
 export const Home = () => {
   return (
     <div className="h-screen">
       <Header />
-
       <div className="py-12 px-2 bg-brand-background_light h-auto">
         <div className="max-w-7xl mx-auto grid grid-cols-2">
           <div className="flex justify-center flex-col max-w-xl">

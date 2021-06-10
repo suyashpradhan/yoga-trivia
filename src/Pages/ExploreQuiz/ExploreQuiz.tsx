@@ -6,6 +6,10 @@ import hard from "../../Assets/images/hard.svg";
 import { BsClockHistory } from "react-icons/bs";
 import { AiFillPlayCircle } from "react-icons/ai";
 
+const startTrivia = () => {
+  console.log("started");
+};
+
 export const ExploreQuiz = () => {
   return (
     <div className="h-screen bg-brand-background">
@@ -38,7 +42,7 @@ export const ExploreQuiz = () => {
               <p className="text-md font-headline font-medium text-brand-secondaryText leading-snug mb-6">
                 Trivia base on your basic knowledge of Yoga.
               </p>
-              <Link to="/yoga-quiz">
+              <Link to="/rules">
                 <button className="font-headline bg-brand-dark w-full px-4 py-4 rounded-md inline text-lg align-baseline text-white">
                   <AiFillPlayCircle className="text-white inline mr-1 h-6 w-6" />
                   Enter Trivia
