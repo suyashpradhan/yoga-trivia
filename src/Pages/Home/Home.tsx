@@ -1,7 +1,6 @@
 import { Header } from "../../Components/Header";
 import { Link } from "react-router-dom";
 import banner1 from "../../Assets/images/banner 1.png";
-import { getGameQuestions } from "../../services/GameArea/GameArea";
 
 export const Home = () => {
   return (
