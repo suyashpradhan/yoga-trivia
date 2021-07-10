@@ -1,6 +1,7 @@
 import { Header } from "../../Components/Header";
 import { Link } from "react-router-dom";
 import banner1 from "../../Assets/images/banner 1.png";
+import { BsFillCaretRightFill } from "react-icons/bs";
 
 export const Home = () => {
   return (
@@ -13,11 +14,14 @@ export const Home = () => {
               A Perfect Time For a Bit Of Relax and Yoga Chill
             </h1>
             <p className="text-xl text-left mt-4 font-headline text-brand-secondaryText font-medium tracking-tight leading-tight">
-              Stay at home and play some cool quizzes with us!
+              Stay at home and play some cool yoga trivias with us!
             </p>
-            <Link to="/quiz">
+            <Link to="/explore">
               <button className="mt-8 py-3 px-6 rounded-md bg-brand-dark font-headline text-xl font-medium text-white focus:outline-none focus:ring-2 focus:ring-brand-dark focus:ring-opacity-60 hover:shadow-xl">
-                Explore Quiz
+                Explore Trivia{" "}
+                <BsFillCaretRightFill
+                  style={{ display: "inline", verticalAlign: "middle" }}
+                />
               </button>
             </Link>
           </div>

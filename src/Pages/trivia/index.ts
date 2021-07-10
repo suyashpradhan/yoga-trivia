@@ -1,0 +1,1 @@
+export { Trivia } from "./Trivia";

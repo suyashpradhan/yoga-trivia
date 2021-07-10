@@ -13,6 +13,7 @@ module.exports = {
           secondaryText: "#5c5d5d",
           background: "#f5f5f7",
           border: "#E8E7E9",
+          danger: "#ff0000",
         },
       },
       fontFamily: {
@@ -21,7 +22,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ["disabled"],
+    },
   },
   plugins: [],
 };

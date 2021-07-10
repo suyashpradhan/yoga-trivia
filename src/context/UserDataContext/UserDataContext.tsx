@@ -4,13 +4,12 @@ import {
   UserDataType,
   UserDataContextType,
 } from "./userData.types";
-import { userReducer } from "../../reducers/userDataReducer/userDataReducer";
+import { userReducer } from "../../reducers/userReducer";
 
 const initialValue: UserDataType = {
   _id: null,
   name: "",
   email: "",
-  takenQuizList: [],
 };
 
 export const UserDataContext = createContext<UserDataContextType>(

@@ -1,7 +1,7 @@
 import {
   UserDataType,
   UserActionType,
-} from "../../context/UserDataContext/userData.types";
+} from "../context/UserDataContext/userData.types";
 
 export const userReducer = (
   state: UserDataType,

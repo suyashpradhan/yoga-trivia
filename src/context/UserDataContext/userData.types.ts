@@ -1,5 +1,4 @@
 import { Dispatch } from "react";
-import { AttemptedTrivia } from "../triviaContext.types";
 
 export type UserDataProviderProp = {
   children: JSX.Element;
@@ -9,16 +8,9 @@ export type UserDataType = {
   _id: string | null;
   name: string;
   email: string;
-  takenQuizList: AttemptedTrivia[];
 };
 
 export type UserActionType =
-  | {
-      type: "RESET_TAKEN_QUIZ";
-      payload: {
-        takenQuizList: AttemptedTrivia[];
-      };
-    }
   | {
       type: "INITIALIZE_USER";
       payload: {
@@ -26,13 +18,7 @@ export type UserActionType =
       };
     }
   | {
-      type: "FLUSH_DATA";
-    }
-  | {
-      type: "SAVE_QUIZ_ANSWER";
-      payload: {
-        takenQuiz: AttemptedTrivia;
-      };
+      type: "CLEAR_DATA";
     };
 
 export type UserDataContextType = {
@@ -44,7 +30,7 @@ export type UserDataContextType = {
   setUserLoading: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export type UseUserDataType = {
+export type useUserResponseDataType = {
   isUserLoggedIn: boolean;
   userData: UserDataType;
   userLoading: boolean;
@@ -59,8 +45,7 @@ export type UseUserDataType = {
     email,
     password,
     path,
-  }: SignUpArgsType) => Promise<boolean>;
-  resetQuizData: (path: string) => Promise<boolean>;
+  }: RegisterUserArgumentsType) => Promise<boolean>;
 };
 
 export type UserDataResponse = {
@@ -69,7 +54,6 @@ export type UserDataResponse = {
     _id: string | null;
     name: string;
     email: string;
-    takenQuizList: AttemptedTrivia[];
   };
 };
 
@@ -79,7 +63,6 @@ export type LoginUserDataResponse = {
     _id: string | null;
     name: string;
     email: string;
-    takenQuizList: AttemptedTrivia[];
     token: string;
   };
 };
@@ -89,18 +72,9 @@ export type ServerError = {
   message: string;
 };
 
-export type SubmitUserDataResponse = {
-  success: boolean;
-};
-
-export type SignUpArgsType = {
+export type RegisterUserArgumentsType = {
   name: string;
   email: string;
   password: string;
   path: string;
-};
-
-export type QuizResetResponseType = {
-  success: boolean;
-  takenQuizList: AttemptedTrivia[];
 };
