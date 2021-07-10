@@ -1,4 +1,4 @@
-# A Quiz App based on Yoga and Fitness
+# A Trivia App based on Yoga and Fitness
 
 ## Tech Stack
 
