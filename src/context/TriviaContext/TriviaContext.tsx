@@ -1,16 +1,16 @@
 import { createContext, useReducer, useState } from "react";
-import { triviaReducer } from "../reducers/triviaReducer";
 import {
-  AttemptedTrivia,
   Trivia,
-  TriviaContextType,
   TriviaData,
   TriviaProviderProp,
-} from "./triviaContext.types";
+  AttemptedTrivia,
+  TriviaContextType,
+} from "./trivia.types";
+import { quizReducer } from "../../reducers/quizReducer";
 
 export const initialState: AttemptedTrivia = {
   triviaId: "",
-  totalScore: 0,
+  score: 0,
   answerList: [],
 };
 
@@ -24,7 +24,7 @@ export const TriviaProvider = ({
   const [triviaLoading, setTriviaLoading] = useState<boolean>(true);
   const [triviaList, setTriviaList] = useState<Trivia[]>([]);
   const [currentTrivia, setCurrentTrivia] = useState<TriviaData | null>(null);
-  const [state, triviaDispatch] = useReducer(triviaReducer, initialState);
+  const [state, triviaDispatch] = useReducer(quizReducer, initialState);
   const [triviaError, setTriviaError] = useState<string>("");
 
   return (
