@@ -12,7 +12,11 @@ export const Header = () => {
       <div className="max-w-7xl mx-auto px-2 flex justify-between ">
         <div>
           <Link to="/">
-            <img src={logo} className="h-24 w-24 flex-1" alt="logo"></img>
+            <img
+              src="https://yoga-trivia-assets.s3.ap-south-1.amazonaws.com/logo.svg"
+              className="h-24 w-24 flex-1"
+              alt="logo"
+            ></img>
           </Link>
         </div>
         <ul className="flex justify-center items-center">
@@ -25,10 +29,20 @@ export const Header = () => {
             </Link>
           </li>
           {isUserLoggedIn ? (
-            <div>
-              <h1>Hello {userData.name}</h1>
-              <button>Logout</button>
-            </div>
+            <ul className="flex justify-center items-center ">
+              <li className="text-lg mr-6 font-headline">
+                Hello {userData.name}
+              </li>
+              <li>
+                <button
+                  className="py-2 px-5 font-headline rounded-md
+                border-brand-danger bg-brand-danger text-white text-lg hover:bg-white hover:text-brand-danger
+                hover:border-brand-danger border focus:outline-none focus:ring-2 focus:ring-brand-danger focus:ring-opacity-50"
+                >
+                  Logout
+                </button>
+              </li>
+            </ul>
           ) : (
             <li>
               <Link to="/login" className="font-headline">

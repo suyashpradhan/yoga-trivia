@@ -23,7 +23,11 @@ export const QuestionCard = ({
         <div className="max-w-7xl mx-auto px-2 flex justify-between ">
           <div>
             <Link to="/">
-              <img src={logo} className="h-24 w-24 flex-1" alt="logo"></img>
+              <img
+                src="https://yoga-trivia-assets.s3.ap-south-1.amazonaws.com/logo.svg"
+                className="h-24 w-24 flex-1"
+                alt="logo"
+              ></img>
             </Link>
           </div>
           <ul className="flex justify-center items-center">

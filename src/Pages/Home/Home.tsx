@@ -1,6 +1,5 @@
 import { Header } from "../../Components/Header";
 import { Link } from "react-router-dom";
-import banner1 from "../../Assets/images/banner 1.png";
 import { BsFillCaretRightFill } from "react-icons/bs";
 
 export const Home = () => {
@@ -26,7 +25,10 @@ export const Home = () => {
             </Link>
           </div>
           <div className="flex-auto">
-            <img src={banner1} alt="banner" className=""></img>
+            <img
+              src="https://yoga-trivia-assets.s3.ap-south-1.amazonaws.com/banner+1.png"
+              alt="banner"
+            ></img>
           </div>
         </div>
         <div></div>
