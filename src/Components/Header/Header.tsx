@@ -1,10 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
-import logo from "../../Assets/images/logo.svg";
+import { Link } from "react-router-dom";
 import { useUserResponseData } from "../../hooks";
 
 export const Header = () => {
-  const navigate = useNavigate();
-  const { isUserLoggedIn, userData } = useUserResponseData();
+  const { isUserLoggedIn, userData, logOutUser } = useUserResponseData();
 
   console.log(userData);
   return (
@@ -21,12 +19,12 @@ export const Header = () => {
         </div>
         <ul className="flex justify-center items-center">
           <li className="mr-6">
-            <Link
-              to="/about"
+            <a
+              href="https://github.com/suyashpradhan/yoga-trivia"
               className="font-headline text-gray-800 text-lg  hover:text-brand-dark"
             >
               github
-            </Link>
+            </a>
           </li>
           {isUserLoggedIn ? (
             <ul className="flex justify-center items-center ">
@@ -38,6 +36,7 @@ export const Header = () => {
                   className="py-2 px-5 font-headline rounded-md
                 border-brand-danger bg-brand-danger text-white text-lg hover:bg-white hover:text-brand-danger
                 hover:border-brand-danger border focus:outline-none focus:ring-2 focus:ring-brand-danger focus:ring-opacity-50"
+                  onClick={logOutUser}
                 >
                   Logout
                 </button>
