@@ -1,8 +1,7 @@
 import { QuestionPropType } from "../../context/TriviaContext/trivia.types";
 import { Option } from "./Option";
-import { useQuestionHelper } from "./useQuestionHelper";
+import { useTriviaQuestion } from "./TriviaQuestion";
 import { Link } from "react-router-dom";
-import logo from "../../Assets/images/logo.svg";
 
 export const QuestionCard = ({
   question,
@@ -10,7 +9,7 @@ export const QuestionCard = ({
   loading,
   setLoading,
 }: QuestionPropType): JSX.Element => {
-  const { selectOptionOnClick } = useQuestionHelper({
+  const { selectOptionOnClick } = useTriviaQuestion({
     question,
     loadNextQuestion,
     loading,
@@ -45,8 +44,6 @@ export const QuestionCard = ({
           </ul>
         </div>
       </header>
-
-      {console.log(question)}
 
       <main className="max-w-7xl mx-auto px-2 my-8">
         <h2 className="text-4xl mb-8 leading-normal tracking-tight font-headline font-semibold text-gray-900 text-center">

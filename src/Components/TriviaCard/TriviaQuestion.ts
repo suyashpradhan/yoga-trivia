@@ -1,16 +1,16 @@
 import { QuestionPropType } from "../../context/TriviaContext/trivia.types";
 import { useTrivia } from "../../hooks";
 
-export type UseQuestionHelperType = {
+export type TriviaQuestion = {
   selectOptionOnClick: (_id: string, isCorrect: boolean) => void;
 };
 
-export const useQuestionHelper = ({
+export const useTriviaQuestion = ({
   loading,
   setLoading,
   question,
   loadNextQuestion,
-}: QuestionPropType): UseQuestionHelperType => {
+}: QuestionPropType): TriviaQuestion => {
   const { currentTriviaAnswer, triviaDispatch } = useTrivia();
 
   const isAlreadyAnswered = (questionId: string): boolean =>
